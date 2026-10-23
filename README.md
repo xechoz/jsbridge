@@ -1,5 +1,9 @@
 # jsbridge
 
+[![CI](https://github.com/xechoz/jsbridge/actions/workflows/ci.yml/badge.svg)](https://github.com/xechoz/jsbridge/actions/workflows/ci.yml)
+[![Maven Central](https://img.shields.io/badge/Maven%20Central-0.1.0-blue.svg)](https://central.sonatype.com/artifact/io.github.xechoz/jsbridge/0.1.0)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+
 Android WebView 与 Web 的双向异步 RPC，分两层：
 
 1. **Part 1：核心 JS ↔ Android 交互**
@@ -15,8 +19,22 @@ Android WebView 与 Web 的双向异步 RPC，分两层：
 Maven Central：
 
 ```kotlin
-implementation("io.github.xechoz:jsbridge:0.1.0")
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("io.github.xechoz:jsbridge:0.1.0")
+}
 ```
+
+发布页：
+
+- Central Portal：https://central.sonatype.com/artifact/io.github.xechoz/jsbridge/0.1.0
+- GitHub Releases：https://github.com/xechoz/jsbridge/releases
+- Maven Central 目录：https://repo1.maven.org/maven2/io/github/xechoz/jsbridge/
+
+已用发布版在独立 Android library 工程中做过消费验证：依赖可解析，`JsBridge` API 可编译。
 
 ## 范围与限制
 
