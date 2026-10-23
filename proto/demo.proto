@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package demo.bridge;
+
+option java_package = "me.xechoz.jsbridge.demo.proto";
+option java_multiple_files = true;
+
+message EchoRequest {
+  string text = 1;
+}
+
+message EchoResponse {
+  string text = 1;
+}
+
+message AddRequest {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+message AddResponse {
+  int32 sum = 1;
+}
+
+service NativeApi {
+  rpc Echo(EchoRequest) returns (EchoResponse);
+}
+
+service WebApi {
+  rpc Add(AddRequest) returns (AddResponse);
+}

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JsBridge Demo</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 20px;
+        background: #0f172a;
+        color: #e2e8f0;
+      }
+      h1 {
+        font-size: 20px;
+        margin: 0 0 6px;
+      }
+      p {
+        color: #94a3b8;
+        margin: 0 0 16px;
+        font-size: 13px;
+      }
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+      button {
+        border: 1px solid #334155;
+        background: #1e293b;
+        color: #e2e8f0;
+        border-radius: 8px;
+        padding: 10px 12px;
+        font-size: 14px;
+        text-align: left;
+      }
+      button:active {
+        background: #334155;
+      }
+      #log {
+        margin-top: 16px;
+        padding: 12px;
+        min-height: 180px;
+        max-height: 45vh;
+        overflow: auto;
+        border-radius: 8px;
+        background: #020617;
+        border: 1px solid #1e293b;
+        font-family: ui-monospace, SFMono-Regular, monospace;
+        font-size: 12px;
+        line-height: 1.6;
+        white-space: pre-wrap;
+      }
+      .ok {
+        color: #6ee7b7;
+      }
+      .err {
+        color: #fca5a5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JsBridge Demo</h1>
+    <p id="status">initializing…</p>
+
+    <div class="buttons">
+      <button id="echo">JS → Android echo</button>
+      <button id="reverse">Nested reverse call</button>
+      <button id="timeout">Timeout</button>
+      <button id="cancel">Cancel</button>
+      <button id="fail">Handler error</button>
+      <button id="selftest">Run self test</button>
+      <button id="typed-echo">Typed NativeApi.echo</button>
+      <button id="typed-add">Typed WebApi.add</button>
+      <button id="reload">Reload page</button>
+    </div>
+
+    <div id="log"></div>
+
+    <script src="./demo.js"></script>
+  </body>
+</html>

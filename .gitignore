@@ -1,0 +1,14 @@
+.gradle/
+build/
+**/build/
+local.properties
+.idea/
+*.iml
+web/node_modules/
+demo/src/main/assets/web/
+.kotlin/
+.env
+*.jks
+*.keystore
+secrets.properties
+.DS_Store
